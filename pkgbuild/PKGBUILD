@@ -13,7 +13,7 @@ makedepends=('cargo')
 optdepends=('hyprland: list and close app windows in the Apps tab')
 options=('!debug')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
-sha256sums=('SKIP')
+sha256sums=('026866f5f2710231891d7c091489dba57c849f75499663592c93718da2cee8cf')
 
 prepare() {
   cd "$_repo-$pkgver"

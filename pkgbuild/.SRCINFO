@@ -1,0 +1,19 @@
+pkgbase = omarchy-system-monitor
+	pkgdesc = Terminal task manager for Omarchy: processes, Hyprland apps, CPU, memory, GPU, temperatures, network and disks
+	pkgver = 0.1.0
+	pkgrel = 1
+	url = https://github.com/Karnav7/system-monitor
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = cargo
+	depends = gcc-libs
+	depends = glibc
+	depends = hicolor-icon-theme
+	depends = xdg-terminal-exec
+	optdepends = hyprland: list and close app windows in the Apps tab
+	options = !debug
+	source = omarchy-system-monitor-0.1.0.tar.gz::https://github.com/Karnav7/system-monitor/archive/refs/tags/v0.1.0.tar.gz
+	sha256sums = 026866f5f2710231891d7c091489dba57c849f75499663592c93718da2cee8cf
+
+pkgname = omarchy-system-monitor
