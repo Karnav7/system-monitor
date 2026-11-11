@@ -1,0 +1,44 @@
+# Maintainer: Karnav7 <https://github.com/Karnav7>
+
+pkgname=omarchy-system-monitor
+_repo=system-monitor
+pkgver=0.1.0
+pkgrel=1
+pkgdesc='Terminal task manager for Omarchy: processes, Hyprland apps, CPU, memory, GPU, temperatures, network and disks'
+arch=('x86_64' 'aarch64')
+url='https://github.com/Karnav7/system-monitor'
+license=('MIT')
+depends=('gcc-libs' 'glibc' 'hicolor-icon-theme' 'xdg-terminal-exec')
+makedepends=('cargo')
+optdepends=('hyprland: list and close app windows in the Apps tab')
+options=('!debug')
+source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
+sha256sums=('SKIP')
+
+prepare() {
+  cd "$_repo-$pkgver"
+  export RUSTUP_TOOLCHAIN=stable
+  cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+}
+
+build() {
+  cd "$_repo-$pkgver"
+  export RUSTUP_TOOLCHAIN=stable
+  export CARGO_TARGET_DIR=target
+  cargo build --frozen --release
+}
+
+check() {
+  cd "$_repo-$pkgver"
+  export RUSTUP_TOOLCHAIN=stable
+  cargo test --frozen --release
+}
+
+package() {
+  cd "$_repo-$pkgver"
+  install -Dm755 target/release/$pkgname "$pkgdir/usr/bin/$pkgname"
+  install -Dm644 pkgbuild/$pkgname.desktop "$pkgdir/usr/share/applications/$pkgname.desktop"
+  install -Dm644 pkgbuild/$pkgname.svg "$pkgdir/usr/share/icons/hicolor/scalable/apps/$pkgname.svg"
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+  install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
+}

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=System Monitor
+GenericName=Task Manager
+Comment=Processes, apps, CPU, memory, GPU, network and disks
+Exec=xdg-terminal-exec --app-id=TUI.tile -e omarchy-system-monitor
+Icon=omarchy-system-monitor
+Terminal=false
+Categories=System;Monitor;ConsoleOnly;
+Keywords=task;manager;process;kill;top;htop;btop;cpu;memory;
+StartupNotify=true

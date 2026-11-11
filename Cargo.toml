@@ -1,9 +1,11 @@
 [package]
-name = "system-monitor"
+name = "omarchy-system-monitor"
 version = "0.1.0"
 edition = "2021"
 description = "A terminal task manager for Omarchy"
 license = "MIT"
+repository = "https://github.com/Karnav7/system-monitor"
+readme = "README.md"
 
 [dependencies]
 anyhow = "1"

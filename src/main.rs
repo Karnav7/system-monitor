@@ -17,7 +17,7 @@ use theme::ThemeWatcher;
 
 const USAGE: &str = "System Monitor: a terminal task manager for Omarchy
 
-Usage: system-monitor [--help | --version]
+Usage: omarchy-system-monitor [--help | --version]
 
 Press ? inside System Monitor to see every key.";
 
@@ -29,11 +29,11 @@ fn main() -> Result<()> {
             return Ok(());
         }
         Some("-V" | "--version") => {
-            println!("system-monitor {}", env!("CARGO_PKG_VERSION"));
+            println!("omarchy-system-monitor {}", env!("CARGO_PKG_VERSION"));
             return Ok(());
         }
         Some(other) => {
-            eprintln!("system-monitor: unknown argument '{other}'\n\n{USAGE}");
+            eprintln!("omarchy-system-monitor: unknown argument '{other}'\n\n{USAGE}");
             std::process::exit(2);
         }
     }

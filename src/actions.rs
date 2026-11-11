@@ -41,7 +41,7 @@ pub fn signal(pid: u32, sig: Sig) -> Result<(), String> {
         Sig::Kill => Signal::SIGKILL,
     };
     kill(Pid::from_raw(pid as i32), s).map_err(|e| match e {
-        Errno::EPERM => format!("permission denied for PID {pid}; it belongs to another user (run system-monitor with sudo to stop it)"),
+        Errno::EPERM => format!("permission denied for PID {pid}; it belongs to another user (run omarchy-system-monitor with sudo to stop it)"),
         Errno::ESRCH => format!("PID {pid} has already exited"),
         e => format!("could not signal PID {pid}: {e}"),
     })

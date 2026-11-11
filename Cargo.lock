@@ -342,6 +342,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "omarchy-system-monitor"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "nix",
+ "ratatui",
+ "serde",
+ "serde_json",
+ "sysinfo",
+ "tempfile",
+ "toml",
+]
+
+[[package]]
 name = "once_cell"
 version = "1.21.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -631,20 +645,6 @@ dependencies = [
  "objc2-core-foundation",
  "objc2-io-kit",
  "windows",
-]
-
-[[package]]
-name = "system-monitor"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "nix",
- "ratatui",
- "serde",
- "serde_json",
- "sysinfo",
- "tempfile",
- "toml",
 ]
 
 [[package]]
