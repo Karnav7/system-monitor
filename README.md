@@ -12,15 +12,15 @@ A terminal task manager for [Omarchy](https://omarchy.org). It shows running pro
 
 ## Install
 
-### From the AUR
+### From the AUR (coming soon)
 
-On Omarchy, open the Omarchy menu → **Install → AUR** and search for `omarchy-system-monitor`, or run:
+The package isn't on the AUR yet; [`pkgbuild/AUR.md`](pkgbuild/AUR.md) tracks the upload. Once it's there, open the Omarchy menu → **Install → AUR** and search for `omarchy-system-monitor`, or run:
 
 ```sh
 yay -S omarchy-system-monitor
 ```
 
-Then open **System Monitor** from the app launcher (Super+Space), or run `omarchy-system-monitor` in a terminal.
+Then open **System Monitor** from the app launcher (Super+Space), or run `omarchy-system-monitor` in a terminal. Until then, use the prebuilt binary or build from source.
 
 ### Prebuilt binary
 
@@ -69,7 +69,7 @@ cargo clippy --all-targets -- -D warnings
 cargo run
 ```
 
-Releases are built by GitHub Actions when a `v*` tag is pushed. The AUR recipe lives in [`pkgbuild/`](pkgbuild/).
+Releases are built by GitHub Actions when a `v*` tag is pushed. The AUR recipe lives in [`pkgbuild/`](pkgbuild/); [`pkgbuild/AUR.md`](pkgbuild/AUR.md) covers publishing it and updating it for new releases.
 
 ## License
 
