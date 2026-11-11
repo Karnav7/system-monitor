@@ -1,0 +1,23 @@
+[{
+    "address": "0x55a3912c0ce0",
+    "mapped": true,
+    "hidden": false,
+    "workspace": { "id": 11, "name": "11" },
+    "class": "brave-browser",
+    "title": "New Tab - Brave",
+    "pid": 5425
+},{
+    "address": "0x55a3918eb080",
+    "mapped": true,
+    "workspace": { "id": 2, "name": "2" },
+    "class": "",
+    "title": "untitled",
+    "pid": 6100
+},{
+    "address": "0x55a3918eb999",
+    "mapped": false,
+    "workspace": { "id": 2, "name": "2" },
+    "class": "ghost",
+    "title": "hidden",
+    "pid": 6200
+}]
